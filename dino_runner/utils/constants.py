@@ -46,9 +46,13 @@ DUCKING_HAMMER = [
 ]
 
 SMALL_CACTUS = [
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus3.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus2.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus3.png")),
+
 ]
 LARGE_CACTUS = [
     pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus1.png")),
