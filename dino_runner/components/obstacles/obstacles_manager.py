@@ -21,3 +21,7 @@ class ObstacleManager:
     def draw(self, game):
         for obstacle in self.obstacles:
             obstacle.draw(game.screen)
+
+
+    def reset_obstacles(self):
+        self.obstacles = []
