@@ -16,11 +16,20 @@ class Game:
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         self.clock = pygame.time.Clock()
         self.playing = False
+        self.executing = False
         self.game_speed = 20
         self.x_pos_bg = 0
         self.y_pos_bg = 380
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
+
+    def executor(self):
+        self.executing = True
+        while self.executing:
+            if not self.playing:
+                self.show_menu()
+
+        pygame.quit()            
 
     def run(self):
         # Game loop: events - update - draw
@@ -29,7 +38,7 @@ class Game:
             self.events()
             self.update()
             self.draw()
-        pygame.quit()
+
 
     def events(self):
         for event in pygame.event.get():
@@ -59,3 +68,6 @@ class Game:
             self.screen.blit(BG, (image_width + self.x_pos_bg, self.y_pos_bg))
             self.x_pos_bg = 0
         self.x_pos_bg -= self.game_speed
+
+    def show_menu(self):
+        print("Menú")
