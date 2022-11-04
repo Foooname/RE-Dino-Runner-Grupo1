@@ -7,6 +7,6 @@ class Cactus(Obstacle):
         super().__init__(images, self.type)
         if self.type == 0 or self.type == 1 or self.type == 2:
             self.rect.y = 295
-        elif self.type == 3 or self.type == 4 or self.type == 5:
+        else:
             self.rect.y = 320
 
