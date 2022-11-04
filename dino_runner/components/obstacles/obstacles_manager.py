@@ -29,7 +29,6 @@ class ObstacleManager:
                     game.death_count += 1
                     break
                 elif game.player.type == HAMMER_TYPE:
-                    
                     self.hammer_obstacle(game)
                 else:
                     self.obstacles.remove(obstacle)

@@ -98,7 +98,7 @@ class Game:
         self.x_pos_bg -= self.game_speed
 
     def show_menu(self): 
-        self.screen.fill((255, 255, 255))
+        self.screen.fill((180, 180, 180))
         half_screen_height = SCREEN_HEIGHT // 2
         half_screen_width = SCREEN_WIDTH // 2
         font_score = pygame.font.Font(FONT_STYLE, 30)
@@ -106,10 +106,10 @@ class Game:
         font_dead_count = pygame.font.Font(FONT_STYLE, 100)
 
         if self.death_count == 0:
-            font = pygame.font.Font(FONT_STYLE, 30)
-            text_component = font.render("Press any key to play", True, (0,0,0) )
+            font = pygame.font.Font(FONT_STYLE, 80)
+            text_component = font.render("Press any key to play", True, (20,20,20) )
             text_rect = text_component.get_rect()
-            text_rect.center = (half_screen_width, half_screen_height)
+            text_rect.center = (half_screen_width, half_screen_height +30)
             self.screen.blit(text_component, text_rect)
             self.screen.blit(RUNNING[0], (half_screen_width -30, half_screen_height -140))
 
@@ -124,7 +124,7 @@ class Game:
             score_rect.center = (half_screen_width, half_screen_height)
             self.screen.blit(score_text, (score_rect.x +130, score_rect.y -250) )
             ##########################################
-            score_text = font_score.render(f"Max Sore: {self.score.max_score}  | ", True, (0,0,0) )
+            score_text = font_score.render(f"Max Sore: {self.score.max_score} ", True, (0,0,0) )
             score_rect = score_text.get_rect()
             score_rect.center = (half_screen_width, half_screen_height)
             self.screen.blit(score_text, (score_rect.x -80, score_rect.y -250) )               
